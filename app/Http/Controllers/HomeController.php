@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\models\categoria;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,5 +25,17 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+
+    public function categoria()
+
+
+    {
+        $categoria = categoria::all();
+
+        echo json_encode($categoria);
+        exit;
+        return view('categoria');
     }
 }
