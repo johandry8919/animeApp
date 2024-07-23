@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\models\categoria as ModelsCategoria;
+use App\models\Genero;
 use Illuminate\Http\Request;
 
 class Categoria extends Controller
@@ -14,7 +14,7 @@ class Categoria extends Controller
 
 
     {
-        $categoria = ModelsCategoria::all();
+        $categoria = Genero::all();
 
         echo json_encode($categoria);
         exit;

@@ -15,6 +15,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+
     }
 
     /**
@@ -32,10 +33,7 @@ class HomeController extends Controller
 
 
     {
-        $categoria = categoria::all();
-
-        echo json_encode($categoria);
-        exit;
+        
         return view('categoria');
     }
 }

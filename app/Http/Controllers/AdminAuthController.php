@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
-
+use App\models\Video;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,6 +18,7 @@ class AdminAuthController extends Controller
     {
         $sesion = Auth::guest(); 
 
+        
         if($sesion) $sesion = true ; else $sesion = false ; 
 
         return view('admin.index' , ['sesion' => $sesion ]); 
